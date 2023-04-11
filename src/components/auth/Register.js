@@ -7,23 +7,26 @@ import { register } from "../../actions/auth";
 
 const Register = ({ register, isAuthenticated }) => {
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     email: "",
     password: "",
     password2: "",
+    gender:"",
+    city:""
   });
 
-  const { name, email, password, password2 } = formData;
+  const { fullName, email, password, password2, gender, city } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    console.log(fullName, email, password, password2, gender, city );
     if (password !== password2) {
       console.log("Passwords do not match");
     } else {
-      register({ name, email, password });
+      register({ fullName, email, password, gender, city});
     }
   };
 
@@ -42,16 +45,16 @@ const Register = ({ register, isAuthenticated }) => {
           <div className="mb-4">
             <label
               className="block text-gray-700 font-bold mb-2"
-              htmlFor="email"
+              htmlFor="fullName"
             >
               Name
             </label>
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="text"
-              placeholder="Name"
-              name="name"
-              value={name}
+              placeholder="Enter your full name"
+              name="fullName"
+              value={fullName}
               onChange={(e) => onChange(e)}
               required
             />
@@ -66,7 +69,7 @@ const Register = ({ register, isAuthenticated }) => {
             <input
               className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               type="email"
-              placeholder="Email Address"
+              placeholder="Email address"
               name="email"
               value={email}
               onChange={(e) => onChange(e)}
@@ -111,6 +114,57 @@ const Register = ({ register, isAuthenticated }) => {
               onChange={(e) => onChange(e)}
               minLength="6"
               required
+            />
+          </div>
+          {/* /////////////////////////////////// */}
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 font-bold mb-2"
+              htmlFor="gender"
+            >
+              Gender
+            </label>
+            Male{"   "}
+            <input
+              type="radio"
+              name="gender"
+              value="male"
+              onChange={onChange}
+              checked={formData.gender==="male"}
+            />{"                               "}
+            Female{"   "}
+            <input
+              
+              type="radio"
+              name="gender"
+              value="female"
+              onChange={onChange}
+              checked={formData.gender==="female"}
+            />{"                               "}
+            Others{"   "}
+            <input
+              
+              type="radio"
+              name="gender"
+              value="others"
+              onChange={onChange}
+              checked={formData.gender==="others"}
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              className="block text-gray-700 font-bold mb-2"
+              htmlFor="city"
+            >
+              City
+            </label>
+            <input
+              className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              type="text"
+              placeholder="Enter your city name"
+              name="city"
+              value={city}
+              onChange={(e) => onChange(e)}
             />
           </div>
           <div className="flex items-center justify-between">

@@ -45,3 +45,35 @@ export default function Dashboard() {
     </div>
   );
 }
+// const MaterialForm = () => {
+//   return (
+//       <div className="container">
+//           <h3>Material Theme Form</h3>
+//           <form className="col s12">
+//               <div className="row">
+//                   <div className="input-field col s12">
+//                       <input id="name" type="text" className="validate" />
+//                       <label htmlFor="name">Name</label>
+//                   </div>
+//               </div>
+//               <div className="row">
+//                   <div className="input-field col s12">
+//                       <input id="items" type="text" className="validate" />
+//                       <label htmlFor="items">Items</label>
+//                   </div>
+//               </div>
+//               <div className="row">
+//                   <div className="input-field col s12">
+//                       <textarea id="process" className="materialize-textarea"></textarea>
+//                       <label htmlFor="process">Process</label>
+//                   </div>
+//               </div>
+//               
+//               <button className="btn waves-effect waves-light" type="submit" name="action">Submit
+//                   <i className="material-icons right">send</i>
+//               </button>
+//           </form>
+//       </div>
+//   );
+// }
+
