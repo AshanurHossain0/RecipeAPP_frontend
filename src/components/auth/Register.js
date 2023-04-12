@@ -22,7 +22,6 @@ const Register = ({ register, isAuthenticated }) => {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    console.log(fullName, email, password, password2, gender, city );
     if (password !== password2) {
       console.log("Passwords do not match");
     } else {

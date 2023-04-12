@@ -15,3 +15,34 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container{
+  width: 100%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-evenly;
+}
+.box1,.box2{
+  margin-top: 100px;
+  width:300px;
+  height:270px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container img{
+  width:300px;
+  height:200px
+}
+
+#post-rec,#get-rec{
+  padding: 5px 10px;
+  background-color: rgb(37, 9, 116);
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+

@@ -2,18 +2,22 @@ import axios from "axios";
 
 import { appConfig } from "../config/config";
 
-export async function postRecipe() {
+export async function postRecipe({ name, items, process }) {
   const config = {
     headers: {
       "Content-Type": "application/json",
       "x-auth-token": localStorage.getItem("token"),
     },
-    body:{
 
-    }
   };
-  const res = await axios.post(`${appConfig.API_URL}/api/recipes`,config);
-  return res;
+  const body = JSON.stringify({ name, items, process });
+  try {
+    const res = await axios.post(`${appConfig.API_URL}/api/recipes`, body, config);
+    alert(res.data.msg)
+  }
+  catch(err){
+    alert(err.message);
+  }
 }
 export async function getPosts() {
   const config = {
@@ -26,4 +30,4 @@ export async function getPosts() {
   return res;
 }
 
-export async function getReviews() {}
+// export async function getReviews() {}

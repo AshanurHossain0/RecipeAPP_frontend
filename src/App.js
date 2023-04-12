@@ -10,6 +10,8 @@ import { loadUser } from "./actions/auth";
 import Login from "./components/auth/Login";
 import Register from "./components/auth/Register";
 import Dashboard from "./components/layout/Dashboard";
+import Recipes from "./components/layout/Recipes"
+import Postrecipe from "./components/layout/Postrecipe"
 
 import PrivateRoute from "./components/routing/PrivateRoute";
 
@@ -28,6 +30,8 @@ function App() {
           <Switch>
             <PrivateRoute exact path="/" component={Dashboard} />
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <PrivateRoute exact path="/recipes" component={Recipes} />
+            <PrivateRoute exact path="/post/recipe" component={Postrecipe} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
           </Switch>
