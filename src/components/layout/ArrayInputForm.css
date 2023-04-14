@@ -1,70 +1,198 @@
 .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f8f8f8;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .form-input {
-    display: block;
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .form-textarea {
-    display: block;
-    width: 100%;
-    height: 100px;
-    padding: 8px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  
-  .form-item-container {
-    display: flex;
-    margin-bottom: 10px;
-  }
-  
-  .form-remove-button {
-    margin-left: 10px;
-    color: #fff;
-    background-color: #dc3545;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .form-add-button {
-    margin-top: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: #28a745;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
-  
-  .form-submit-button {
-    margin-top: 10px;
-    margin-left: 10px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-  }
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-cont{
+  height: 660px;
+  background:url("https://st4.depositphotos.com/22719282/39378/i/450/depositphotos_393781864-stock-photo-various-food-seamless-pattern-hand.jpg");
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-item-container {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.form-remove-button {
+  margin-left: 10px;
+  color: #fff;
+  background-color: #dc3545;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-add-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-submit-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cont {
+  background:url("https://st4.depositphotos.com/22719282/39378/i/450/depositphotos_393781864-stock-photo-various-food-seamless-pattern-hand.jpg");
+  font-size:1.2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid red;
+  width: 100%;
+}
+
+.cont-box {
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  background-color: rgba(255, 255, 255, 0.576);
+  width: 60%;
+  margin: 10px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+}
+
+.upper {
+  padding: 5px;
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.upper img{
+  border-radius: 50px;
+  margin-right: 30px;
+  width: 100px;
+}
+
+.lower {
+  /* border: 1px solid rgb(103, 92, 74); */
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.tail {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 15px;
+  font-weight: bold;
+}
+.tail button{
+  background-color: rgb(0, 115, 255);
+  color: white;
+  padding: 3px 5px;
+  border-radius: 7px;
+  height: 30px;
+}
+.tail button:hover{
+  background-color: rgb(2, 82, 255);
+}
+
+.author {
+  margin: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.recipe {
+  margin: 10px;
+}
+
+.process {
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid grey;
+}
+
+.para {
+  width: 100%;
+  /* set the box width to 100% of its parent container */
+  max-width: 500px;
+  /* set the maximum width of the box */
+  padding: 20px;
+  /* set the desired padding */
+  background-color: #f0f0f0;
+  /* set the desired background color */
+  border: 1px solid #ccc;
+  /* set the desired border */
+  margin: 0 auto;
+  /* center the box horizontally */
+  box-sizing: border-box;
+  /* include padding in the total width */
+  white-space: pre-wrap;
+  /* allow long words to break and wrap */
+  word-break: break-word;
+  /* break long words if necessary */
+}
+
+.process h2 {
+  margin-right: 20px;
+  text-align: center;
+}
+h2{
+  font-size: 20px;
+}
+h1{
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.review{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}

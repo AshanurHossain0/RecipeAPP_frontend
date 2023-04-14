@@ -6,7 +6,6 @@ import "../../index"
 
 export default function Dashboard() {
   return (
-    <>
       <div className="container">
         <div className="box1">
           <img src="https://fastly.picsum.photos/id/3/5000/3333.jpg?hmac=GDjZ2uNWE3V59PkdDaOzTOuV3tPWWxJSf4fNcxu4S2g" alt="post-recipe" />
@@ -17,7 +16,6 @@ export default function Dashboard() {
           <Link to="/recipes"><button id="get-rec">Recipes</button></Link>
         </div>
       </div>
-    </>
   )
 }
 

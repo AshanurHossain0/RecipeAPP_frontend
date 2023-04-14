@@ -38,7 +38,7 @@ const Register = ({ register, isAuthenticated }) => {
       <div className="flex flex-col justify-center items-center h-screen">
         <h2 className="text-xl font-bold mb-4">Sign In</h2>
         <form
-          className="bg-blue-50 rounded px-8 pt-6 pb-8 mb-4"
+          className="bg-blue-50 rounded px-2 pt-0 pb-0 mb-0"
           onSubmit={(e) => onSubmit(e)}
         >
           <div className="mb-4">

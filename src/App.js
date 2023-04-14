@@ -12,6 +12,7 @@ import Register from "./components/auth/Register";
 import Dashboard from "./components/layout/Dashboard";
 import Recipes from "./components/layout/Recipes"
 import Postrecipe from "./components/layout/Postrecipe"
+import Review from "./components/layout/Review"
 
 import PrivateRoute from "./components/routing/PrivateRoute";
 
@@ -32,6 +33,7 @@ function App() {
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
             <PrivateRoute exact path="/recipes" component={Recipes} />
             <PrivateRoute exact path="/post/recipe" component={Postrecipe} />
+            <PrivateRoute exact path="/post/review" component={Review} />
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
           </Switch>

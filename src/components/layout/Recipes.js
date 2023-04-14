@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {getPosts} from "../../scripts/recipes"
+import { Route, Link } from "react-router-dom"
+import { getPosts,giveReview } from "../../scripts/recipes"
+import "./ArrayInputForm.css"
+
 
 export default function Recipes() {
   const [posts, setPosts] = useState([]);
-//   const [reviews, setReviews] = useState([]);
+  //   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     getPosts()
@@ -14,29 +17,54 @@ export default function Recipes() {
   }, []);
 
   return (
-    <div>
+    <div className="cont">
       {posts.length > 0 &&
         posts.map((post) => {
-          const {name, items,process, author, totalReview, rating } = post;
+          const { name, items, process, author, totalReview, rating, _id } = post;
           return (
-            <div key={Math.random()}>
-              <div className="max-w-md rounded overflow-hidden shadow-lg">
-                <img className="w-full" style={{width:"100px"}} src="https://media.istockphoto.com/id/1402004971/photo/healthy-heart-food-high-in-flavonoids-and-polyphenols.jpg?s=1024x1024&w=is&k=20&c=tNHyUcoK9Veqhs5mfNenLTyQ6PTjm-WR4SL_WZEAgQ4=" alt="Recipe Image" />
-                <div className="px-6 py-4">
-                  <div className="flex items-center mb-2">
-                    <div>
-                      <div className="font-bold text-xl">{name}</div>
-                      <p className="text-gray-700 text-base">{author.fullName}</p>
-                    </div>
+            <div key={Math.random()} className="cont-box">
+              <div className="upper">
+                <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/08/chana-masala-recipe-500x500.jpg"></img>
+                <h1>{name}</h1>
+              </div>
+              <div className="lower">
+                <div className="author">
+                  <h2>Author Details</h2>
+                  <div>
+                    <p>Name : {author.fullName}</p>
+                    <p>Email : {author.email}</p>
+                    <p>Gender : {author.gender}</p>
+                    <p>City : {author.city}</p>
                   </div>
-                  <ul className="list-disc ml-5 mb-4">
-                    <li>{items[0]}</li>
-                    <li>{items[1]}</li>
-                    <li>{items[2]}</li>
-                  </ul>
-                  <p className="text-gray-700 text-base mt-4">Recipe Procedure:</p>
-                  <p className="text-gray-700 text-base">{process}</p>
                 </div>
+                <div className="recipe">
+                  <div className="items">
+                    <h2>Items</h2>
+                    {items.map((item) => {
+                      return (
+                        <li key={Math.random()}>{item}</li>
+                      )
+                    })}
+                  </div>
+
+                </div>
+                <div className="process">
+                  <h2>Making Process</h2>
+                  <div className="para">
+                    <p >{process}</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="tail">
+                <div className="rating" style={{color:"red"}}>
+                  Rating : <span style={{color:"green"}}>{(rating) ? (rating) : <span>No Rating</span>}</span>
+                </div>
+                <div className="total-review" style={{color:"red"}}>
+                  Total Review : <span style={{color:"green"}}>{totalReview}</span>
+                </div>
+                <button>See Review</button>
+                <button onClick={()=>{}} className="review">Give Review</button>
               </div>
             </div>
           );

@@ -30,4 +30,11 @@ export async function getPosts() {
   return res;
 }
 
+export async function giveReview(rating,review,_id){
+  console.log(rating,review,_id);
+}
+// export async function giveReview(recipeId){
+//   console.log(recipeId);
+// }
+
 // export async function getReviews() {}
