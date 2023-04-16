@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { Route, Link } from "react-router-dom"
-import { getPosts,giveReview } from "../../scripts/recipes"
+import { getPosts ,giveReview, deletePost} from "../../scripts/recipes"
+// import Givereview from "./Review"
 import "./ArrayInputForm.css"
 
 
+const userId = localStorage.getItem("userId");
 export default function Recipes() {
   const [posts, setPosts] = useState([]);
   //   const [reviews, setReviews] = useState([]);
@@ -64,7 +66,8 @@ export default function Recipes() {
                   Total Review : <span style={{color:"green"}}>{totalReview}</span>
                 </div>
                 <button>See Review</button>
-                <button onClick={()=>{}} className="review">Give Review</button>
+                <button onClick={()=>{giveReview(_id)}} className="review">Give Review</button>
+                <button id="dlt" onClick={()=>deletePost(_id,author._id)}>Delete</button>
               </div>
             </div>
           );

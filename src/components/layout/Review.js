@@ -1,9 +1,7 @@
-export default function Review() {
+export default async function Givereview(_id){
     return (
-        <>
-            <div>
-                Hello
-            </div>
-        </>
+      <>
+      hii
+      </>
     )
-}
+  }

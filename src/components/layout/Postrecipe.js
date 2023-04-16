@@ -52,7 +52,7 @@ const ArrayInputForm = () => {
     <div className='form-cont'>
       <form className="form-container" onSubmit={handleSubmit}>
         <label className="form-label">
-          Name:
+          Name of Recipe:
           <input
             className="form-input"
             type="text"
@@ -61,7 +61,7 @@ const ArrayInputForm = () => {
           />
         </label>
         <label className="form-label">
-          Process:
+          Making Process:
           <textarea
             className="form-textarea"
             value={process}

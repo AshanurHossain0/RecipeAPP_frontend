@@ -137,6 +137,12 @@
   border-radius: 7px;
   height: 30px;
 }
+#dlt{
+  background-color: #dc3545;
+}
+#dlt:hover{
+  background-color: #f00f26;
+}
 .tail button:hover{
   background-color: rgb(2, 82, 255);
 }
