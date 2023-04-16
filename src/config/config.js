@@ -1,5 +1,5 @@
 module.exports = {
   appConfig: {
-    API_URL: "http://localhost:3001",
+    API_URL: "https://recipeproject-backend.onrender.com",
   },
 };
