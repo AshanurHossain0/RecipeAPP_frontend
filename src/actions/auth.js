@@ -53,6 +53,7 @@ export const register =
       });
       dispatch(loadUser());
     } catch (err) {
+      alert(err.response.data.msg)
       const errors = err.response.data.errors;
       if (errors) {
         // errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
@@ -79,6 +80,7 @@ export const login = (email, password) => async (dispatch) => {
     });
     dispatch(loadUser());
   } catch (err) {
+    alert(err.response.data.msg)
     const errors = err?.response?.data?.errors;
     if (errors) {
       // errors.forEach((error) => dispatch(setAlert(error.msg, "danger")));
