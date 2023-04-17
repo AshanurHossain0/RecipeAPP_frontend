@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Link } from "react-router-dom"
+import {Redirect, Route, Link } from "react-router-dom"
 import { getPosts ,giveReview, deletePost} from "../../scripts/recipes"
 // import Givereview from "./Review"
 import "./ArrayInputForm.css"
@@ -8,7 +8,7 @@ import "./ArrayInputForm.css"
 const userId = localStorage.getItem("userId");
 export default function Recipes() {
   const [posts, setPosts] = useState([]);
-  //   const [reviews, setReviews] = useState([]);
+    const [flag, setFlag] = useState(false);
 
   useEffect(() => {
     getPosts()
@@ -17,7 +17,7 @@ export default function Recipes() {
       })
       .catch((err) => console.log(err));
   }, []);
-
+  if(flag) return <Redirect to="/dashboard"/>
   return (
     <div className="cont">
       {posts.length > 0 &&
@@ -66,8 +66,8 @@ export default function Recipes() {
                   Total Review : <span style={{color:"green"}}>{totalReview}</span>
                 </div>
                 <button>See Review</button>
-                <button onClick={()=>{giveReview(_id)}} className="review">Give Review</button>
-                <button id="dlt" onClick={()=>deletePost(_id,author._id)}>Delete</button>
+                <button onClick={()=>{giveReview(_id); setFlag(true)}} className="review">Give Review</button>
+                <button id="dlt" onClick={()=>{deletePost(_id,author._id);setFlag(true)}}>Delete</button>
               </div>
             </div>
           );
