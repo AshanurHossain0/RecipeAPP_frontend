@@ -1,3 +1,10 @@
+html{
+  font-size: 62.5%;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 .form-container {
   max-width: 400px;
   margin: 0 auto;
@@ -76,20 +83,22 @@
 
 .cont {
   background:url("https://st4.depositphotos.com/22719282/39378/i/450/depositphotos_393781864-stock-photo-various-food-seamless-pattern-hand.jpg");
-  font-size:1.2vw;
+  font-size:1.5rem;
+  width: 135rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid red;
-  width: 100%;
+  border: 0.2rem solid red;
 }
 
 .cont-box {
-  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0rem 4.8rem 10rem 0rem;
   background-color: rgba(255, 255, 255, 0.576);
-  width: 90%;
-  margin: 10px;
-  border: 2px solid black;
+  width: 120rem;
+  padding: 1rem;
+  margin: 1rem;
+  box-sizing: border-box;
+  border: 0.2rem solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,7 +106,7 @@
 }
 
 .upper {
-  padding: 5px;
+  /* padding: 5px; */
   /* border: 2px solid green; */
   display: flex;
   flex-direction: row;
@@ -105,37 +114,37 @@
   justify-content: space-around;
 }
 .upper img{
-  border-radius: 50px;
-  margin-right: 30px;
-  width: 100px;
+  border-radius: 5rem;
+  margin-right: 3rem;
+  width: 10rem;
 }
 
 .lower {
   /* border: 1px solid rgb(103, 92, 74); */
-  width: 100%;
+  width: 120rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .tail {
-  width: 100%;
-  padding: 20px;
+  width: 120rem;
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-end;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .tail button{
   background-color: rgb(0, 115, 255);
   color: white;
-  padding: 3px 5px;
-  border-radius: 7px;
-  height: 30px;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.7rem;
+  height: 3rem;
 }
 #dlt{
   background-color: #dc3545;
@@ -148,32 +157,32 @@
 }
 
 .author {
-  margin: 10px;
-  border: 1px solid grey;
-  border-radius: 10px;
-  padding: 10px;
+  margin: 1rem;
+  border: 0.1rem solid grey;
+  border-radius: 1rem;
+  padding: 1rem;
 }
 
 .recipe {
-  margin: 10px;
+  margin: 1rem;
 }
 
 .process {
-  padding: 10px;
-  border-radius: 30px;
-  border: 1px solid grey;
+  padding: 1rem;
+  border-radius: 3rem;
+  border: 0.1rem solid grey;
 }
 
 .para {
-  width: 100%;
+  width: 120rem;
   /* set the box width to 100% of its parent container */
-  max-width: 500px;
+  max-width: 50rem;
   /* set the maximum width of the box */
-  padding: 20px;
+  padding: 2rem;
   /* set the desired padding */
   background-color: #f0f0f0;
   /* set the desired background color */
-  border: 1px solid #ccc;
+  border: 0.1rem solid #ccc;
   /* set the desired border */
   margin: 0 auto;
   /* center the box horizontally */
@@ -186,14 +195,14 @@
 }
 
 .process h2 {
-  margin-right: 20px;
+  margin-right: 2rem;
   text-align: center;
 }
 h2{
-  font-size: 20px;
+  font-size: 2rem;
 }
 h1{
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: bold;
   text-transform: capitalize;
 }
