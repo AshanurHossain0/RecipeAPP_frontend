@@ -259,4 +259,20 @@ h1{
   .author h2{
     font-size: 6rem;
   }
+  .rating,.total-review{
+    font-size: 4rem;
+  }
+  .tail button{
+    font-size: 2rem;
+    height: 4rem;
+  }
+  .upper img{
+    width: 16rem;
+  }
+  .upper h1{
+    font-size: 6rem;
+  }
+  .process h2{
+    font-size: 6rem;
+  }
 }
